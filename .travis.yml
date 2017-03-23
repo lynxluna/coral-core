@@ -1,0 +1,37 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+env:
+  global:
+  - PATH=$PATH:$HOME/.buckdir/bin
+  - secure: Odqh07KnZWo4/ED9R3UJOr+VHX/G2bUnsNMDbHGsU3Yo0tMuIS1qKCh4imXObioNxx1QS4UwhpNtQ7+5DzTpNYBG6NpefqmnzP1MzXevCspQgbcBOQ86+hPtfxX3/CZXnyMVAicMnfoI4bEbZlbMYOzszynRpqXjAVvCexMgGWl26UqXvsQppllWocGR2YrzayZq/XUMQsYbJUGe0UYReOpAbI9V+EhwsYFlSiM/V0RaRO/24JbnkzjGWL8qYzaahm1nfWlAe3jGpb9pIJuKg9Gki23bjAVC5t/KbXeoO6fhM7sflpvnfNznr2AVdgAGNa0W5W4DzQQ3hPTdVjVFo3Pq7cHAYp/BUOusYO72TZSBbAtgPZRACW4GN5N6gAzgT3cQ2hYAvE9RsaNzqRWjAQkTchCM12QsmO0ycyw/7xlT/99LMtjmDTQs/qpy/zvFlZN1ZcJtV+jYWpM9mZL3ZWfIcptHek/aryBZKx4pGxWdCEjP/Ncv6CLHmC2Wnr5kp5sTBGraOVbKFDnjOY+2RY7Wfnv3mCT/GL22coSLWmOI5UBhyADUfKW+5pADltOaV75S5OdOxZfxZI+P69TrmwSGqjyqJG/p+e8gYil+dgVFNrU+Q4SleVjpnWEsOjNYd8+AFthhfJiQxq+4MUqvYDvSrJePuXpcT1yvYN19P5I=
+  - secure: aSumcalOo0og39hEmdo/9VsIuYSUDUvCksT+3B4QmB6OlSd0HpQf1lRarcA2G/xQYj+Y8qWcB9fA0cRscJ2lKoS0NBNx7LCRnPI7G0YmNeUl9pUewjoYtBtpgSSz+gu8U0N6X8nU+XlDDSjF+k8ffw3cfnOQyyDPDrhBPSUHGW7uy9xZsbMOuXmNADSBn7tO+0wZbwgPWBi6OZuCf/EU8K5I2V6R6tHkX6WZNy57CgtEQkAbR1f8rm5pAy7LR347JgTRMb8HsH/eBOU0kzvhjOcXn954lFVA1Db2ofV4ckNypzQ+K61fN3uuXxfPMjo/GxzJC1sEH0xz2tMVpVrxAghglPv6dpEf7mIVWxWuGmdO3ASHSfaaqvTB8vO7RqFlm6/aoiPc1JGGCnb9Ifg6x3Ead5QssMzmPTntbUChsBChNrwvzU2cOHFbVHh3YGsD9ROyOk7NIAYFdEmn4uidu5jhWwgQkIRexiuhpHeSJURe4ZF6oNfWjNe24j7MtuxJ7AjAKqFo++l53wXP/OiXsnqt9OI4CTFr/e/nWPBoc4sIeG5J/iN3NFKwSVz641BKkqWbtsnbiJv7eQheavqzOGi9A+BY8u42mL5HFTb9zPGrA4F6SglVCYhOoOJ0kNVSTohCukMIZfQVHEIMc772iBvtzknik+UYalO4akWfONY=
+  - secure: pr8BpQBiZgia2bLju1OiHRisUI8C9Joy3x2JpPUsIiJhBu9wDPI80mYI6kwMSLrlGyRvOTvkk1gGDxK2qOyHp/GX6wxHBBFI01IgBac8VfyIOJTrPuYAyHOVZ6TCblWFiqSgs+r9G0gtqFKF3BJqyfdFC8dVFF9AD5lmpzol4YCtrVgcCqAYuKO90OgjeJC+8+hi7Rqu7W0TLEIzGxNGmMxYfsmTiEifAMla1i9BxqGnkf9dNeYWa9HnDhnr6W8MsvekHTE5Pj6lhiqpyPPP7At6HHHkI8ROR0DBFECS5O1I/trPdZA+Z2r78/qc8ivgCqwbhqgkqmTaHmWJURESBYZOst5tssUvmwZq5v8KgxUdWzpww1dJDQCKoEOMLTxbTeeTbKuvtTWAZ3NukXbMXyPF0PyvYIN8eP5udUgazVME5vy6MBmt1xnaBaghWramcvlaz3tODtJiuMwGgFpJEWGISnkvnGriCo8FJytiIH0pBkDMaaibeGUEObdUOeG0DA5s9D7WrzQ3k7tey4AjqMo5BKuAHYC1S6wBEd/KXCsKCh1VNCB65eEPqxyHiFPd3NMBOH04Lc+PSzgBUSgEVAuz5SiYKB90DB7zwFHV3OuRx1yQUr5HcOhEEkHd2/ZcqSvS8Jk+m4ivjmNUQyI2SHsm2H6Jg8o0+SLprIiL1/Y=
+  - secure: Q5XIy+/pCNd1DhHxQ7Zw/4cMf3qscXSyoOKLlrXoyXg/7T6CJ43qXHtaNITQUyvijLiSKNWoG+qASc7vXQe/FbdVfB5NHOZqWPY9CDA/cxgdpf3N+K7VTs1FNN9IJbhFcurZMJZJUg3E3e/hKpt6m25q+cyTSwqtitW123aGE/BPwPAxR/Vn9o2Kwrvp9ue5jg9jK7AkYNoaqUdPt8L5ZELqqusXP+kT3gm8fGmAEcQdMY3olCxUB+AySYRf/lUr42z/wZ+JN69GBS9cY7GPjxMyhvVYLCR8swXXvAkRf2lZwPVrrcVjKFOFwwX23ffivoDh1StUkIeWCmRSmzZrL+GbudQGw55JQiWu7gHCjNQ75uxdDVmF86pQ1J6ZSg2EeM7fwwirakTULYyCrarTY+GDxLLvt3uK8DbTKl4nr5E0ECwyKAIQL8MrNEkeCUKS6Fk+GwNBAQHZDhhcOL3GdoM9f5uPj7m+GHat3cqu6Z5Ytqc2PGh2kDKaH18X5sLE+ZgCHnYS3787MBgEhalWWyASF71p5YpO/XhTFVwLnSJPOVWXnBITtURbOpJEbGNynEsbh9iXr8sQjgCapllLdLulv+VGJKuRThUO4fkO5J5dHfY6QOMZwLHvGHR+uQTAWb1cv/KOqpIESdqpCOng/4xrsZzGlthm1WVv5tjvrqs=
+
+cache:
+  directories:
+  - ".autoconf"
+  - "$HOME/.m2/repository"
+  - "$HOME/.buckdir"
+
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+      - gnupg2
+
+install:
+  - curl -s "https://get.sdkman.io" | bash
+  - source "/home/travis/.sdkman/bin/sdkman-init.sh"
+  - mvn install -P !build-extras -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+script:
+  - mvn test -P !build-extras -B
+
+after_success:
+  - mvn coveralls:report -P !build-extras
+  - "./scripts/before-deploy.sh"
+  - "./scripts/deploy.sh"
