@@ -1,5 +1,9 @@
 # Coral Core Library
 
+[![Build Status](https://travis-ci.org/Bhinneka/coral-core.svg?branch=master)](https://travis-ci.org/Bhinneka/coral-core)
+[![Coverage Status](https://coveralls.io/repos/github/Bhinneka/coral-core/badge.svg?branch=master)](https://coveralls.io/github/Bhinneka/coral-core?branch=master)
+[![Code Climate](https://codeclimate.com/github/Bhinneka/coral-core/badges/gpa.svg)](https://codeclimate.com/github/Bhinneka/coral-core)
+
 A Domain Driven Design Core Library for the Java Virtual Machine.
 
 # LICENSE
