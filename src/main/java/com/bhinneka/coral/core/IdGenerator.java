@@ -13,7 +13,7 @@ public interface IdGenerator<T> {
   /**
    * Generate next value for the Entity ID.
    *
-   * @return new value for entity ID.
+   * @param handler the asynchronous handler to accept the next identity value
    */
   void nextValue(AsyncHandler<T> handler);
 }
