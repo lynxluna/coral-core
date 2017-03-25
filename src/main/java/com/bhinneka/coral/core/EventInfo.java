@@ -1,7 +1,5 @@
 package com.bhinneka.coral.core;
 
-import com.bhinneka.coral.core.util.ValueObject;
-
 import java.util.Date;
 import javax.annotation.Nonnull;
 
@@ -13,7 +11,7 @@ import javax.annotation.Nonnull;
  * @param <I> The type of id used by entity.
  * @param <S> The type of state in which {@link #event} is applied.
  */
-public class EventInfo<I, S> implements ValueObject<EventInfo.Builder> {
+public class EventInfo<I, S> {
   private final I entityId;
   private final Event<S> event;
   private final int version;
@@ -119,8 +117,9 @@ public class EventInfo<I, S> implements ValueObject<EventInfo.Builder> {
 
   /**
    * The Builder for copying values and change some properties.
+   *
+   * @return EventInfo copy builder
    */
-  @Override
   public Builder<I, S> copyBuilder() {
     return new Builder<I, S>(entityId, event, version, date);
   }
@@ -134,7 +133,7 @@ public class EventInfo<I, S> implements ValueObject<EventInfo.Builder> {
     private int version;
     private Date date;
 
-    Builder(@Nonnull I entityId, @Nonnull Event<S> event, int version, Date date) {
+    private Builder(@Nonnull I entityId, @Nonnull Event<S> event, int version, Date date) {
       this.entityId = entityId;
       this.event = event;
       this.version = version;

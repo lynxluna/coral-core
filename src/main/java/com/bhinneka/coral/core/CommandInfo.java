@@ -1,17 +1,14 @@
 package com.bhinneka.coral.core;
 
-import com.bhinneka.coral.core.util.ValueObject;
-
 /**
- * Command information. Contains command information to be executed.
- * This is also a {@link ValueObject} instance. This class is immutable.
+ * Command information. Contains command information to be executed. This class is immutable.
  * To create an instance of this class you need to invoke
  * {@link #newBuilder(Command) newBuilder}
  *
  * @param <I> The type of identity used by entity
  * @param <S> The type of the state in which {@link #command} is applied to
  */
-public class CommandInfo<I, S> implements ValueObject<CommandInfo.Builder> {
+public class CommandInfo<I, S> {
   private final I entityId;
   private final Command<S> command;
   private final int targetVersion;
@@ -66,7 +63,6 @@ public class CommandInfo<I, S> implements ValueObject<CommandInfo.Builder> {
    *
    * @return an CommandInfo builder.
    */
-  @Override
   public Builder<I, S> copyBuilder() {
     return new Builder<I, S>(entityId, command, targetVersion);
   }
