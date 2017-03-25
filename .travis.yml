@@ -29,7 +29,7 @@ install:
   - mvn install -P !build-extras -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
-  - mvn test -P !build-extras -B
+  - mvn clean test jacoco:report -P !build-extras -B
 
 after_success:
   - mvn coveralls:report -P !build-extras
