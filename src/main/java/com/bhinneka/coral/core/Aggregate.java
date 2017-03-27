@@ -3,6 +3,7 @@ package com.bhinneka.coral.core;
 import com.bhinneka.coral.core.exceptions.InvalidCommandException;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import javax.annotation.Nonnull;
 
 /**
@@ -36,5 +37,5 @@ public interface Aggregate<S> {
    * @param command The command to be executed.
    * @return The events emitted as the result of command execution.
    */
-  List<Event<S>> exec(@Nonnull S state, @Nonnull Command<S> command) throws InvalidCommandException;
+  CompletableFuture<Iterable<Event<S>>> exec(@Nonnull S state, @Nonnull Command<S> command);
 }

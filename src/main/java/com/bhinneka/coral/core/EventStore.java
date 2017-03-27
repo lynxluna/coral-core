@@ -1,8 +1,7 @@
 package com.bhinneka.coral.core;
 
-import com.bhinneka.coral.core.handlers.AsyncHandler;
-
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * Implement this store to persist and load {@link EventInfo EventInfo}.
@@ -15,24 +14,25 @@ public interface EventStore<I, S> {
   /**
    * Loads all events for and entity of specific id.
    *
-   * @param id the entity id to query
-   * @param handler the handler of the load operation
+   * @param id the entity id to query.
+   * @return future containing last state.
    */
-  void load(I id, AsyncHandler<List<EventInfo<I, S>>> handler);
+  CompletableFuture<Iterable<EventInfo<I, S>>> load(I id);
 
   /**
    * Loads all events of an entity to specific version.
    *
    * @param id the entity id.
    * @param version the last version queried.
-   * @param handler the handler of load operation.
+   * @return future containing state of specific version
    */
-  void load(I id, int version, AsyncHandler<List<EventInfo<I, S>>> handler);
+  CompletableFuture<Iterable<EventInfo<I, S>>> load (I id, int version);
 
   /**
    * Commits an event to the event store.
-   *  @param eventInfo event information to be persisted.
-   * @param handler the handler of the commit operation
+   *
+   * @param eventInfo event information to be persisted.
+   * @return future with identity of committed event.
    */
-  void commit(EventInfo<I, S> eventInfo, AsyncHandler<I> handler);
+  CompletableFuture<I> commit(EventInfo<I, S> eventInfo);
 }

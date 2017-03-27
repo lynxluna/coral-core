@@ -1,6 +1,6 @@
 package com.bhinneka.coral.core;
 
-import com.bhinneka.coral.core.handlers.AsyncHandler;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * The generator of the entity ID.
@@ -13,7 +13,7 @@ public interface IdGenerator<T> {
   /**
    * Generate next value for the Entity ID.
    *
-   * @param handler the asynchronous handler to accept the next identity value
+   * @return future containing next value.
    */
-  void nextValue(AsyncHandler<T> handler);
+  CompletableFuture <T> nextValue();
 }
